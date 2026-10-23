@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi - Full Project Showcase Portfolio Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Header Block -->
+    <nav class="main-navbar">
+        <div class="logo">Mansi.Dev Workspace</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#notes-app">Notes Utility</a></li>
+            <li><a href="#product-listing">Product Ecosystem</a></li>
+        </ul>
+    </nav>
+
+    <!-- Step 1: Personal Portfolio About Section Component -->
+    <section id="about" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm Mansi</h1>
+            <h2>Frontend Software Engineering Intern</h2>
+            <p>Welcome to my final comprehensive project showcase. This production workspace integrates advanced HTML5 structural layouts, custom modern responsive stylesheets, and native persistent JavaScript application engines to deliver standalone utility solutions.</p>
+        </div>
+    </section>
+
+    <!-- Main Workspace Container -->
+    <main class="workspace-grid">
+
+        <!-- Step 2: Note-Taking Application with Local Storage Persistence -->
+        <section id="notes-app" class="app-card">
+            <div class="app-header">
+                <h3>📝 Persistent Notes Workspace</h3>
+                <span class="badge">localStorage Active</span>
+            </div>
+            <p class="app-desc">Draft and save records natively inside your client-side browser cache storage context.</p>
+            
+            <div class="input-group">
+                <textarea id="noteInput" rows="3" placeholder="Type your project note details here..."></textarea>
+                <button id="saveNoteBtn" class="primary-btn">Save Note</button>
+            </div>
+            
+            <div id="notesContainer" class="notes-grid-display">
+                <!-- Saved notes render dynamically here -->
+            </div>
+        </section>
+
+        <!-- Step 3: Product Listing Page Component with Filtering and Sorting -->
+        <section id="product-listing" class="app-card">
+            <div class="app-header">
+                <h3>📦 Product Component Board</h3>
+                <span class="badge filter-badge">Dynamic Query Pipeline</span>
+            </div>
+            <p class="app-desc">Filter by specific category parameters or sort dynamically by price coefficients.</p>
+            
+            <!-- Controls Layout Framework Row -->
+            <div class="controls-row">
+                <div class="control-box">
+                    <label for="categoryFilter">Category Filter:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Ecosystem Products</option>
+                        <option value="hardware">Hardware Components</option>
+                        <option value="software">Software Subscriptions</option>
+                    </select>
+                </div>
+                <div class="control-box">
+                    <label for="priceSort">Sort By Price:</label>
+                    <select id="priceSort">
+                        <option value="default">Default Index Mapping</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productsGrid" class="products-grid-display">
+                <!-- Products dynamically inject here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Verification Footer Content -->
+    <footer class="main-footer">
+        <p>Task 4 Completion Hub | Portfolio Ecosystem Submitted by: <strong>mansi</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

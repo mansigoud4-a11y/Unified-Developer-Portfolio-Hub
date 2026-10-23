@@ -1,0 +1,307 @@
+/* Color System Tokens Design Core */
+:root {
+    --bg-canvas: #f8fafc;
+    --surface-card: #ffffff;
+    --navy-dark: #0f172a;
+    --teal-accent: #0d9488;
+    --slate-text: #334155;
+    --border-line: #e2e8f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--slate-text);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Flexbox Configuration Header Row */
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navy-dark);
+    padding: 16px 6%;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    color: #2dd4bf;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14.5px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Hero Section Layout Component */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 70px 6%;
+    text-align: center;
+    border-bottom: 4px solid var(--teal-accent);
+}
+
+.hero-content max-width {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+}
+
+.hero-section h2 {
+    color: #2dd4bf;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Master Layout Framework Workspace Container Rows */
+.workspace-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 40px 6%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.app-card {
+    background-color: var(--surface-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-line);
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.app-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--navy-dark);
+}
+
+.badge {
+    background-color: #f0fdfa;
+    color: var(--teal-accent);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.badge.filter-badge {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.app-desc {
+    color: #64748b;
+    font-size: 13.5px;
+    margin: 0 0 25px 0;
+}
+
+/* Notes App Functional Layout Components */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#noteInput {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#noteInput:focus {
+    border-color: var(--teal-accent);
+}
+
+.primary-btn {
+    background-color: var(--teal-accent);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+.notes-grid-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.note-item {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.delete-note-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 0;
+}
+
+/* Product App Functional Filter Controls Rows */
+.controls-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.control-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.control-box label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.control-box select {
+    padding: 10px;
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+    background-color: white;
+    outline: none;
+}
+
+.products-grid-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.product-item-card {
+    border: 1px solid var(--border-line);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-item-card h4 {
+    margin: 0;
+    color: var(--navy-dark);
+    font-size: 16px;
+}
+
+.product-cat-tag {
+    font-size: 11px;
+    background-color: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    align-self: flex-start;
+    color: #475569;
+}
+
+.product-price {
+    font-weight: 700;
+    color: var(--navy-dark);
+    font-size: 18px;
+    margin-top: auto;
+}
+
+/* ============================================================================
+   RESPONSIVE LAYOUT CONSTRAINTS ADJUSTMENTS
+   ============================================================================ */
+@media (max-width: 768px) {
+    .main-navbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 28px;
+    }
+    .workspace-grid {
+        padding: 20px 4%;
+        gap: 25px;
+    }
+}
+
+.main-footer {
+    background-color: var(--navy-dark);
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 12.5px;
+    margin-top: 50px;
+}
